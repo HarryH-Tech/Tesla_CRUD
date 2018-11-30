@@ -1,0 +1,82 @@
+body {
+		background: url(../images/2.jpg) no-repeat center;
+	    font-family: 'Sansation_Light';
+
+}
+
+@font-face {
+    font-family: 'Sansation_Light';
+    src: url('../Sansation_Light.ttf');
+
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1 {
+  text-align: center;
+
+  
+}
+
+form {
+	margin-top: 20px;
+	
+}
+
+	
+form, .content {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 10px;
+}
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+    text-align: center;
+  margin: auto;
+}
+
+.input-group label {
+  display: block;
+
+}
+
+.input-group input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+
+}
+
+
+
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #d6987a;
+  border: none;
+  border-radius: 5px;
+}
+
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.success {
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
