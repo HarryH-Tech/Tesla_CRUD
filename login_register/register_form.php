@@ -1,5 +1,5 @@
 <?php
-	require_once'meekrodb.2.3.class.php';
+	require_once 'meekrodb.2.3.class.php';
 	session_start();
 	
 	DB::$user = 'root';
@@ -14,22 +14,19 @@
 			return;
 		}
 		
-		else if(mb_strlen($_POST['password']) < 5 || !preg_match('/[^A-Za-z0-9]+/', $password)) {
-			$_SESSION['error'] = 'Please ensure your password is at least 5 characters in length and contains at least 1 non non-alphanumeric character.';;
+		else if(mb_strlen($_POST['password']) < 5) {
+			print($password);
+			$_SESSION['error'] = 'Please ensure your password is at least 5 characters long.';
 			header("Location: register.php");
 			return;
 
 					
 		}
-		
-			
 		else if($_POST['password'] != $_POST['confirm_password']) {
 			$_SESSION['error'] = 'Please ensure that both the "Password" and "Confirm Password" fields match.';
 			header("Location: register.php");
 			return;
 		}
-		
-			
 		else {
 	$username = $_POST['username'];
 	$email = $_POST['email'];
@@ -42,9 +39,7 @@
 		'password' => $hash
 	));
 	
-    header('Location: http://localhost/Tesla_PHP_SQL_website/login.php');
+    header('Location: login.php');
 	}
-	}
-	
-
+}
 ?>

@@ -1,13 +1,11 @@
 <?php
 session_start();
-
 $username = '';
 $email = '';
 $errors = array();
 
-
 //connect to sql DB
-$db = mysqlI_connect('localhost', 'root', 'zap', 'tesla_registration');
+$db = mysqlI_connect('localhost', 'root', 'root', 'tesla_registration');
 
 //Register User
 if(isset($_POST['register'])) {
@@ -15,13 +13,7 @@ if(isset($_POST['register'])) {
 	//get all input values from form
 	$username = $_POST['register'];
 	$email = $_POST['email'];
-	
-	
-	
-	
 	$password = $_POST['password'];
-	
-	
 	$confirm_password = $_POST['confirm_password'];
 	
 	//form validation: ensure that form is correctly filled in, if part of it is not, push that error into the array
@@ -68,11 +60,4 @@ if(isset($_POST['register'])) {
 	header('location: index.php');
 	}
 }
-
-
-	
-	
-	
-	
-	
-	?>
+?>
